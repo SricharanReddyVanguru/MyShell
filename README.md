@@ -1,17 +1,21 @@
-MyShell - A Custom Unix Shell in C
+### MyShell - A Custom Unix Shell in C
+
+
 MyShell is a custom Unix-like command-line shell written in C. This shell replicates many core features of Bash, supporting common commands, pipelining, redirection, and process control. It’s designed to provide a lightweight, manageable shell environment that implements several built-in commands and handles background and foreground tasks.
 
-Project Overview
+# Project Overview
 MyShell was developed to understand and practice system-level programming concepts in C. It provides a minimal environment to execute standard shell commands, manage processes, handle input/output redirection, and more, using core system calls and techniques such as fork, exec, pipe, and dup.
 
-Key Features
+# Key Features
+
 Built-in Commands: MyShell includes several custom implementations of essential shell commands, such as cd, pwd, ls, echo, and more.
 Process Management: The shell supports running processes in the foreground and background. Users can control processes with commands like fg, bg, jobs, and kill, making it easier to manage running tasks.
 Piping and Redirection: MyShell implements piping (|) to channel output from one command as input to another and supports input/output redirection using >, >>, and <.
 Command Chaining: Using logical operators (&& and ||), users can create complex command sequences with conditional execution based on previous command success or failure.
 Prompt Customization: The prompt displays username, hostname, and the current working directory, with support for a ~ shorthand to represent the home directory.
 Signal Handling: MyShell handles essential Unix signals (e.g., SIGINT for interrupting a process with Ctrl+C and SIGTSTP for stopping with Ctrl+Z).
-How to Compile and Run
+
+# How to Compile and Run
 Compile:
 
 bash
@@ -26,7 +30,7 @@ Copy code
 ./shell
 This will start MyShell, displaying a prompt where you can enter commands.
 
-Built-In Commands
+# Built-In Commands
 MyShell implements custom versions of these commands:
 
 cd: Changes the current directory.
@@ -50,7 +54,8 @@ pipe(), dup(), and dup2(): Used for inter-process communication and I/O redirect
 Signal Handling:
 
 Custom handlers for signals like SIGINT and SIGTSTP enable the shell to manage interruptions and job control.
-Input Parsing and Command Execution:
+
+# Input Parsing and Command Execution:
 
 Tokenization and parsing functions break down user input for individual command processing.
 Chaining logic with logical operators allows for conditional command execution.
@@ -61,7 +66,8 @@ Job tracking with process IDs (PIDs) and job IDs to manage multiple active proce
 File I/O Redirection:
 
 Redirect standard input, output, and error to files or other commands using the dup and dup2 system calls.
-Example Usages
+
+# Example Usages
 bash
 Copy code
 # Basic commands
